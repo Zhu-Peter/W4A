@@ -1,0 +1,26 @@
+body {
+    display: grid;
+    /* background-color: aqua; */
+}
+
+header {
+    background-color: goldenrod;
+    text-align: center;
+}
+
+#header_logo {
+    width: 100px;
+
+    /* tablet image size */
+    @media only screen and (min-width: 768px){
+        width: 160px;
+    }
+}
+
+#team_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
