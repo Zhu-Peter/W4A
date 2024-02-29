@@ -1,26 +1,128 @@
 body {
     display: grid;
-    /* background-color: aqua; */
+    background-color: beige;
 }
 
 header {
-    background-color: goldenrod;
+    background-color: rgb(250, 222, 153);
     text-align: center;
 }
 
 #header_logo {
     width: 100px;
 
+    margin: 7px;
+
     /* tablet image size */
     @media only screen and (min-width: 768px){
         width: 160px;
+        margin: 17px;
     }
+}
+
+#team_title {
+    text-align: center;
+    font-size: 46px;
+    margin-bottom: 10px;
+    color: rgb(24, 24, 69);
 }
 
 #team_container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 10px;
+    justify-items: center;
+
+    @media only screen and (min-width: 768px){
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 10px;
+    }
 }
 
+#team_container > article {
+    text-align: center;
+    display: inline-block;
+    width: fit-content;
+
+    padding: 0px 20px;
+    border: 3px solid #8e6b6b;
+
+    @media only screen and (min-width: 768px){
+        border: 0px;
+    }
+
+    background-color: rgb(246, 204, 188);
+}
+
+.team_description {
+    display: none;
+    @media only screen and (min-width: 768px){
+        display: block;
+        text-align: justify;
+    }
+}
+
+#product_title {
+    text-align: center;
+    font-size: 46px;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(56, 7, 7);
+}
+
+#product_container {
+    display: grid;
+    margin: auto;
+    @media only screen and (min-width: 768px){
+        grid-template-columns: 1fr 1fr;
+        width: 87%;
+        gap: 20px;
+    }
+}
+
+#product_container > article {
+    text-align: center;
+    @media only screen and (min-width: 768px){
+        display: grid;
+        grid-auto-flow: column;
+        justify-items: center;
+        text-align: justify;
+    }
+}
+
+#product_container > article + article > img{
+    @media only screen and (min-width: 768px){
+        order: 2;
+    }
+}
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    align-items: start;
+    justify-items: center;
+
+    min-width: 65vw;
+    margin-top: 7%;
+    background-color: darkblue;
+    
+}
+
+footer>section {
+    display: grid;
+    align-items: start;
+
+    color: aliceblue;
+    /* background-color: yellow; */
+}
+
+footer a{
+    color: lightblue;
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+
+footer p{
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
