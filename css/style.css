@@ -48,9 +48,11 @@ header {
 
     @media only screen and (min-width: 768px){
         border: 0px;
+        border-radius: 25px;
     }
 
     background-color: rgb(246, 204, 188);
+    border-radius: 15px;
 }
 
 .team_description {
@@ -89,7 +91,7 @@ header {
     }
 }
 
-#product_container > article + article > img{
+#product_container > article:nth-child(even) > img{
     @media only screen and (min-width: 768px){
         order: 2;
     }
