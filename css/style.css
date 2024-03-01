@@ -29,12 +29,30 @@ header {
 
 #team_container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    grid-template-rows: 1fr 1fr 1fr;
     gap: 10px;
     justify-items: center;
 
     @media only screen and (min-width: 768px){
+        grid-template-rows: auto;
         grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+#team_container .team_picture {
+    width: 200px;
+
+    @media only screen and (min-width: 768px){
+        140px;
+    }
+    
+}
+
+#team_container .team_name {
+    font-size: 26px;
+    font-weight: bold;
+    @media only screen and (min-width: 768px){
+        font-size: 20px;
     }
 }
 
