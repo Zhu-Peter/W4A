@@ -43,7 +43,7 @@ header {
     width: 200px;
 
     @media only screen and (min-width: 768px){
-        140px;
+        width: 140px;
     }
     
 }
@@ -135,6 +135,7 @@ footer {
 
 footer>section {
     display: grid;
+    justify-items: center;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     @media only screen and (min-width: 768px){
         align-items: start;
